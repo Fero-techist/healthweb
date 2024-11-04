@@ -5,9 +5,9 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { LiaTimesSolid } from "react-icons/lia";
 
 const navMenu = [
-  { id: 1, path: "", text: "Home" },
-  { id: 2, path: "", text: "Services" },
-  { id: 3, path: "", text: "Doctors" },
+  { id: 1, path: "home", text: "Home" },
+  { id: 2, path: "services", text: "Services" },
+  { id: 3, path: "doctors", text: "Doctors" },
   { id: 4, path: "", text: "About Us" },
   { id: 5, path: "", text: "Contact Us" },
 ];
@@ -41,7 +41,10 @@ const NavBar = ({ handleSignUp }) => {
 
       {/* Autn button */}
       <div className="md:flex hidden items-center gap-3">
-        <Button text={"Sign In"} css={"font-semibold py-2 text-white"} />
+        <Button
+          text={"Sign In"}
+          css={"font-semibold py-2 text-white"}
+        />
         <Button
           text={"Sign Up"}
           css={
@@ -53,7 +56,10 @@ const NavBar = ({ handleSignUp }) => {
       </div>
 
       {/* mobile-menu */}
-      <div className="block md:hidden text-2xl" onClick={hanldeMobileMenu}>
+      <div
+        className="block md:hidden text-2xl"
+        onClick={hanldeMobileMenu}
+      >
         {isOpen ? <LiaTimesSolid /> : <RiMenu3Fill />}
       </div>
 

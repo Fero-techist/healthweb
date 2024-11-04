@@ -15,8 +15,9 @@ const SignUp = ({ setIsSetSignUp }) => {
       />
       <div className="bg-white rounded-lg shadow-lg lg:w-[70%] w-[90%] h-[28rem] md:h-[30rem] flex items-center">
         <div className="lg:w-[50%] bg-deepBlue h-[100%] hidden md:flex flex-col py-3 px-12">
-          <h1 className="font-medium text-white">
+          <h1 className="font-medium text-white relative">
             Hospital <span className="text-deepGrey">logo</span>
+            <div className="absolute top-60  left-60 transform -translate-x-1/2 -translate-y-1/2 bg-white w-16 h-16 md:w-24 md:h-24 rounded-full shadow-lg"></div>
           </h1>
         </div>
         <div className="lg:w-[50%] w-[100%]">
@@ -55,7 +56,10 @@ const SignUp = ({ setIsSetSignUp }) => {
             </div>
             {/* email address */}
             <div className="flex flex-col">
-              <label htmlFor="" className="text-deepGrey text-sm font-medium">
+              <label
+                htmlFor=""
+                className="text-deepGrey text-sm font-medium"
+              >
                 Email Address
               </label>
               <input
